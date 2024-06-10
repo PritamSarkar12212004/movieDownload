@@ -6,6 +6,7 @@
   "scripts": {
     "style": "npx tailwindcss -i ./public/styles/input.css -o ./public/styles/output.css --watch",
     "dev": " node app.js"
+    
   },
   "keywords": [],
   "author": "",
