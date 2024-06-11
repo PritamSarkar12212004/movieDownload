@@ -156,7 +156,7 @@
       </div>
     </section>
   </div>
-<div class="container showmovie  w-full bg-slate-600 p-4  flex flex-col justify-center items-center">
+<div class=" showmovie  w-full bg-slate-600 p-4  flex flex-col justify-center items-center">
   <h1 class="text-white w-full flex justify-center text-3xl font-bold mb-3 uppercase"><%= data.Movie %></h1>
   <img class="rounded-lg" src="<%= data.thumbnailLink %>" alt="">
   <div class="bg-sky-900 h-2 mt-5 rounded-3xl w-full "></div>
@@ -165,10 +165,14 @@
   <img src="<%= data.screenshot2 %>" alt="">
   <img src="<%= data.screenshot3 %>" alt="">
 
-  <a href="<%= data.downloadLink %>" class="w-4/5">
-<button class="px-6 h-11 rounded-2xl mt-3 py-2 font-bold  bg-green-700 text-white w-full h-full ">Download</button>
+  <div class=" w-full flex  justify-center items-center ">
+  <a href="<%= data.downloadLink %>" class="w-3/5 md:">
+    <button type="button" class="text-white bg-gradient-to-r from-blue-500 mt-5 w-full via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 mx-auto">Download</button>
 </a>
 </div>
+</div>
+
+
 
         <script src="/script/show.js"></script>
 </body>
