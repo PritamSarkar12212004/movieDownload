@@ -34,17 +34,25 @@ app.use("/", home);
 
 
 // mongo db database
-async function main() {
+const connectWithRetry = async (retries = 5, delay = 5000) => {
     try {
         await mongoose.connect(process.env.MONGODB_URI, {
-           
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
         });
         console.log('Database is running');
     } catch (error) {
-        console.error('Database connection error:', error);
+        if (retries === 0) {
+            console.error('Database connection error after multiple retries:', error);
+            process.exit(1); // Exit the process with failure code
+        } else {
+            console.warn(`Database connection failed. Retrying in ${delay / 1000} seconds... (${retries} retries left)`);
+            setTimeout(() => connectWithRetry(retries - 1, delay), delay);
+        }
     }
-}
-main();
+};
+
+connectWithRetry();
 
 // server listening
 const port = 3000;
