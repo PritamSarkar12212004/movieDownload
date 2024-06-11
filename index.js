@@ -1,5 +1,7 @@
 // require modules
+
 const express = require("express");
+const ejs = require('ejs');
 const cookieParser = require("cookie-parser");
 const path = require("path");
 require("dotenv").config();
@@ -15,7 +17,7 @@ const admin = require("./router/admin.js");
 
 // set ejs
 app.set(`views`, path.join(__dirname, `views`));
-app.set(`view engine`, `ejs`);
+app.set(`view engine`,`ejs`);
 
 // set static folders
 app.use(express.static(path.join(__dirname, `public`)));
