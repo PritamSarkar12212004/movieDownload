@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const filterControl = require("../middleware/filterControl");
+const filterControl=require("../controller/filter/filterHindi.js")
 
-router.route("/movie").get(filterControl)
+router.route("/movie/hindi").get(filterControl)
 
 module.exports = router;

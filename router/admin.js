@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-router.post("/check", (req, res) => {
+router.use("/check", (req, res) => {
   let { email, password } = req.body;
   // encrypt data next time
   if (

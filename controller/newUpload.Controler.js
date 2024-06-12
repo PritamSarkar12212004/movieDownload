@@ -16,7 +16,7 @@ const newUpload = async (req, res) => {
 
     await movieupload.insertMany([
       {
-        Movie,
+        Movie: Movie.toString(),
         downloadLink,
         thumbnailLink,
         screenshot1,
@@ -31,9 +31,8 @@ const newUpload = async (req, res) => {
 
     console.log("movie uploaded");
   } catch (error) {
-   res.render("./error/serverError.ejs")
+    res.render("./error/serverError.ejs");
   }
-
 };
 
 module.exports = newUpload;
