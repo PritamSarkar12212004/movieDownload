@@ -14,6 +14,7 @@ const app = express();
 const home = require("./router/index.js");
 const admin = require("./router/admin.js");
 const filter = require("./router/filter.js");
+const search = require("./router/search.js");
 
 
 // set ejs
@@ -32,6 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/admin", admin);
 app.use("/", home);
 app.use("/filter", filter);
+app.use("/search", search);
 
 
 // mongo db database
