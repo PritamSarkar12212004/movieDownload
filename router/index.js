@@ -3,7 +3,7 @@
 const express = require("express");
 const router = express.Router();
 // require controllers
-const home = require("../controller/homeController");
+const { home }= require("../controller/homeController");
 const fileUpload = require("../controller/FileuploadController");
 const ShowController = require("../controller/showController");
 const upload = require("../middleware/multerUpload");

@@ -4,7 +4,8 @@ const itemsHi = document.querySelector(".itemsHi");
 const pcLOgbtn = document.querySelector(".pcLOgbtn");
 const pcLogin = document.querySelector(".pcLogin");
 const sideImg=document.querySelector(".sideImg")
-const footer=document.querySelector(".footer")
+const footer = document.querySelector(".footer")
+const searchBar = document.querySelector(".searchBar");
 
 flag = true;
 hamBar.addEventListener("click", () => {
@@ -13,12 +14,14 @@ hamBar.addEventListener("click", () => {
     sideImg.classList.add("hidden");
     itemsHi.classList.add("hidden");
     footer.classList.add("hidden");
+    searchBar.classList.add("hidden");
     flag = false;
   } else {
     SideBar.classList.add("hidden");
     sideImg.classList.remove("hidden");
     itemsHi.classList.remove("hidden");
     footer.classList.remove("hidden");
+    searchBar.classList.remove("hidden");
 
     flag = true;
   }

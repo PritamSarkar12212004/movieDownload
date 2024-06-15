@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  
   "scripts": {
     "style": "npx tailwindcss -i ./public/styles/input.css -o ./public/styles/output.css --watch",
     "start": " node index.js"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -31,4 +33,6 @@
   "devDependencies": {
     "postcss-cli": "^10.0.0"
   }
+  
 }
+
