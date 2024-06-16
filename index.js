@@ -47,7 +47,9 @@ const connectWithRetry = async (retries = 5, delay = 5000) => {
     } catch (error) {
         if (retries === 0) {
             console.error('Database connection error after multiple retries:', error);
-            process.exit(1); // Exit the process with failure code
+            process.exit(1);
+           
+
         } else {
             console.warn(`Database connection failed. Retrying in ${delay / 1000} seconds... (${retries} retries left)`);
             setTimeout(() => connectWithRetry(retries - 1, delay), delay);
