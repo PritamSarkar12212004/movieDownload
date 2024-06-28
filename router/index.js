@@ -18,7 +18,6 @@ router.get("/admin", (req, res) => {
   res.render("./admin.ejs");
 });
 
-router.route("/upload").post(upload.single("Thumbnail"), fileUpload);
 
 router.route("/newUpload").post(newUpload);
 module.exports = router;
