@@ -1,9 +1,5 @@
 const movieupload = require("../model/movieupload.js");
 const newUpload = async (req, res) => {
-
-
-
-  
   try {
     let {
       Movie,
